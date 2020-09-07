@@ -5,8 +5,7 @@ Rails.application.routes.draw do
   get "/techs" => "home#techs"
   get "/qanda" => "home#qanda"
   get "/news" => "home#news"
-  get 'sessions/new'
-
+  
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'

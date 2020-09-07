@@ -2,30 +2,32 @@
   <div class="container">
     <h1 class="my-3 text-center">新規登録</h1>
     <p></p><hr>
-    <div class="field text-center">
+    <div class="field text-center my-3">
       <%= f.label :email %><br>
       <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
     </div>
 
-    <div class="field text-center">
+    <div class="field text-center my-3">
       <%= f.label :name %> <br>
       <%= f.text_field :name %>
     </div>
 
-    <div class="field text-center">
-      <%= f.label :password %>
+    <div class="field text-center my-3">
+      <%= f.label :password %> <br>
+      <!--
       <% if @minimum_password_length %>
-      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <em>(<%= @minimum_password_length %> 文字以上が必要です)</em>
       <% end %><br>
+      -->
       <%= f.password_field :password, autocomplete: "new-password" %>
     </div>
 
-    <div class="field text-center">
+    <div class="field text-center my-3">
       <%= f.label :password_confirmation %><br>
       <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
     </div>
 
-    <div class="actions text-center">
+    <div class="actions">
       <%= f.submit "Sign up" %>
     </div>
   </div>
