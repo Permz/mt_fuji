@@ -1,2 +1,23 @@
 <h1>Users#index</h1>
+
+<table class="table table-striped">
+  <tr><th>Name</th><th>Email</th></tr>
+  <tr><td>Yamada</td><td>16</td></tr>
+  <tr><td>Suzuki</td><td>26</td></tr>
+  <tr><td>Tanaka</td><td>36</td></tr>
+</table>
+
+<% provide(:title, :user.name) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for :user %>
+        <%= :user.name %>
+      </h1>
+    </section>
+  </aside>
+</div>
+
+
 <p>Find me in app/views/users/index.html.erb</p>
